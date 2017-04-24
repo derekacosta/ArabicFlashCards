@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.im_working.arabicflashcards.ResultsActivity">
+
+    <EditText
+        android:id="@+id/ResultsPageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Quiz Results"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="29dp" />
+
+    <EditText
+        android:id="@+id/ResultsPageTimeTitle"
+        android:layout_width="142dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Quiz Duration:"
+        app:layout_constraintBottom_toBottomOf="@+id/TimeDisplay"
+        app:layout_constraintTop_toTopOf="@+id/TimeDisplay"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintRight_toLeftOf="@+id/TimeDisplay"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <EditText
+        android:id="@+id/ResultsPageWrong"
+        android:layout_width="162dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Incorrect Anwers:"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/IncorrectPercentage"
+        app:layout_constraintTop_toTopOf="@+id/IncorrectPercentage"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintRight_toLeftOf="@+id/IncorrectPercentage" />
+
+    <EditText
+        android:id="@+id/ResultsPageCorrect"
+        android:layout_width="142dp"
+        android:layout_height="46dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Correct Anwers:"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/CorrectPercentage"
+        app:layout_constraintTop_toTopOf="@+id/CorrectPercentage"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintRight_toLeftOf="@+id/CorrectPercentage" />
+
+    <EditText
+        android:id="@+id/TimeDisplay"
+        android:layout_width="153dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Time"
+        android:textAlignment="center"
+        tools:layout_editor_absoluteY="158dp"
+        app:layout_constraintRight_toRightOf="@+id/CorrectPercentage" />
+
+    <EditText
+        android:id="@+id/CorrectPercentage"
+        android:layout_width="153dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Correct"
+        android:textAlignment="center"
+        app:layout_constraintRight_toRightOf="@+id/IncorrectPercentage"
+        tools:layout_editor_absoluteY="232dp" />
+
+    <EditText
+        android:id="@+id/IncorrectPercentage"
+        android:layout_width="153dp"
+        android:layout_height="46dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Incorrect"
+        android:textAlignment="center"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="312dp"
+        app:layout_constraintLeft_toRightOf="@+id/ResultsPageWrong" />
+
+    <Button
+        android:id="@+id/ReturnToHomeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="14dp"
+        android:layout_marginRight="14dp"
+        android:text="Return to Main Menu"
+        app:layout_constraintRight_toRightOf="@+id/IncorrectPercentage"
+        tools:layout_editor_absoluteY="468dp" />
+
+    <EditText
+        android:id="@+id/ThankYou"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Thanks for Playing!"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="italic"
+        tools:layout_editor_absoluteY="547dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+        android:id="@+id/PlayAgainButton"
+        android:layout_width="180dp"
+        android:layout_height="58dp"
+        android:text="Play Again!"
+        tools:layout_editor_absoluteY="397dp"
+        app:layout_constraintRight_toRightOf="@+id/ReturnToHomeButton"
+        app:layout_constraintLeft_toLeftOf="@+id/ReturnToHomeButton"
+        app:layout_constraintHorizontal_bias="1.0" />
+</android.support.constraint.ConstraintLayout>
