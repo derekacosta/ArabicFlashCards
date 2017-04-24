@@ -64,11 +64,13 @@ public class GameActivity extends AppCompatActivity implements AdapterView.OnIte
 
         Collections.shuffle(buttons);
 
-//        if()
 
 //        for(int i = 0; i < count; i++) {
-            Options(message);
+//        {
+        Options(message);
 //        }
+//        }
+//        Log.d("test", String.valueOf(bool.get("true").length()));
 
     }
 
@@ -112,15 +114,6 @@ public class GameActivity extends AppCompatActivity implements AdapterView.OnIte
 
             ArrayList<Integer> temp = new ArrayList<>();
 
-//            int ran = random_number(temp, JSON.length());
-//            temp.add(ran);
-//            temp.add(ran);
-//            try {
-//                buttons.get(0).setText(JSON.getJSONArray(JSON.names().getString(ran)).get(0).toString());
-//                buttons.get(1).setText(JSON.getJSONArray(JSON.names().getString(ran)).get(1).toString());
-//            } catch (JSONException e) {
-//                e.printStackTrace();
-//            }
             int ran = random_number(temp, JSON.length());
 
             for(int bttn=0 ; bttn <buttons.size(); bttn++) {
@@ -147,7 +140,7 @@ public class GameActivity extends AppCompatActivity implements AdapterView.OnIte
             String guess;
             try {
                 TextView textView = (TextView) findViewById(R.id.determine);
-                guess = JSON.names().getString(temp.get((int) (Math.random() * temp.size())));
+                guess = JSON.names().getString(temp.get(0));
                 textView.setText(guess);
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -155,10 +148,80 @@ public class GameActivity extends AppCompatActivity implements AdapterView.OnIte
 
 
         } else if (message.equals("Arabic")) {
+            ArrayList<Integer> temp = new ArrayList<>();
 
+            int ran = random_number(temp, JSON.length());
+
+            for(int bttn=0 ; bttn <buttons.size(); bttn++) {
+                try {
+                    if(bttn == 0){
+                        temp.add(ran);
+                        buttons.get(bttn).setText(JSON.names().getString(ran));
+                    }
+                    else if(bttn == 1){
+                        temp.add(ran);
+                        buttons.get(bttn).setText(JSON.getJSONArray(JSON.names().getString(ran)).get(1).toString());
+                    }
+                    else {
+                        int random = random_number(temp, JSON.length());
+                        temp.add(random);
+                        if(bttn%2 == 0)
+                            buttons.get(bttn).setText(JSON.getJSONArray(JSON.names().getString(random)).get(1).toString());
+                        else
+                            buttons.get(bttn).setText(JSON.names().getString(random));
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+
+
+            String guess;
+            try {
+                TextView textView = (TextView) findViewById(R.id.determine);
+                guess = JSON.getJSONArray(JSON.names().getString(temp.get(0))).get(0).toString();
+                textView.setText(guess);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
 
         } else if (message.equals("Romanization")) {
+            ArrayList<Integer> temp = new ArrayList<>();
 
+            int ran = random_number(temp, JSON.length());
+
+            for(int bttn=0 ; bttn <buttons.size(); bttn++) {
+                try {
+                    if(bttn == 0){
+                        temp.add(ran);
+                        buttons.get(bttn).setText(JSON.names().getString(ran));
+                    }
+                    else if(bttn == 1){
+                        temp.add(ran);
+                        buttons.get(bttn).setText(JSON.getJSONArray(JSON.names().getString(ran)).get(0).toString());
+                    }
+                    else {
+                        int random = random_number(temp, JSON.length());
+                        temp.add(random);
+                        if(bttn%2 == 0)
+                            buttons.get(bttn).setText(JSON.getJSONArray(JSON.names().getString(random)).get(0).toString());
+                        else
+                            buttons.get(bttn).setText(JSON.names().getString(random));
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+
+
+            String guess;
+            try {
+                TextView textView = (TextView) findViewById(R.id.determine);
+                guess = JSON.getJSONArray(JSON.names().getString(temp.get(0))).get(1).toString();
+                textView.setText(guess);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
 
         }
     }
