@@ -19,7 +19,8 @@ import static com.example.im_working.arabicflashcards.MainActivity.JSON;
 
 public class GameActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener, View.OnClickListener {
 
-    HashMap<Boolean, Button> bool = new HashMap<Boolean, Button>();
+    ArrayList<Button> butt = new ArrayList<Button>();
+    HashMap<Boolean, ArrayList<Button>> bool = new HashMap<Boolean, ArrayList<Button>>();
     List<Button> buttons = new ArrayList<Button>();
     Button btn0,btn1,btn2,btn3,btn4,btn5,btn6,btn7;
 
@@ -67,12 +68,15 @@ public class GameActivity extends AppCompatActivity implements AdapterView.OnIte
 
 //        for(int i = 0; i < count; i++) {
 //        {
-        Options(message);
+        QuizLoop(message);
 //        }
 //        }
-//        Log.d("test", String.valueOf(bool.get("true").length()));
+//        if(bool.get(true).size() == 2){
+//
+//        }
 
     }
+
 
     @Override
     public void onClick(View v) {
@@ -80,33 +84,56 @@ public class GameActivity extends AppCompatActivity implements AdapterView.OnIte
         switch(v.getId())
         {
             case R.id.button_0 :
-                bool.put(true, btn0);
+                butt.add(btn0);
+                bool.put(true, butt);
                 break;
             case R.id.button_1 :
-                bool.put(true, btn1);
+                butt.add(btn1);
+                bool.put(true, butt);
                 break;
             case R.id.button_2 :
-                bool.put(true, btn2);
+                butt.add(btn2);
+                bool.put(true, butt);
                 break;
             case R.id.button_3 :
-                bool.put(true, btn3);
+                butt.add(btn3);
+                bool.put(true, butt);
                 break;
             case R.id.button_4 :
-                bool.put(true, btn4);
+                butt.add(btn4);
+                bool.put(true, butt);
                 break;
             case R.id.button_5 :
-                bool.put(true, btn5);
+                butt.add(btn5);
+                bool.put(true, butt);
                 break;
             case R.id.button_6 :
-                bool.put(true, btn6);
+                butt.add(btn6);
+                bool.put(true, butt);
                 break;
             case R.id.button_7 :
-                bool.put(true, btn7);
+                butt.add(btn7);
+                bool.put(true, butt);
                 break;
 
         }
 
     }
+
+    public void QuizLoop(String message){
+//        for(int i=0; i<count; i++){
+//            if(bool.get(true).size())
+        Options(message);
+
+//        int i = 0;
+//        do{
+//            i++;
+//            if(bool.get(true).size() ==2)
+//                Options(message);
+//        }
+//        while(i < count);
+    }
+
 
     public void Options(String message) {
 
@@ -225,6 +252,7 @@ public class GameActivity extends AppCompatActivity implements AdapterView.OnIte
 
         }
     }
+
     public int random_number(ArrayList<Integer> temp, int length) {
         int random = (int) (Math.random() * length + 1);
         if(!temp.contains(random)) 
