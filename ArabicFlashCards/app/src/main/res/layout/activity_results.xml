@@ -8,125 +8,6 @@
     tools:layout_editor_absoluteY="81dp"
     tools:layout_editor_absoluteX="0dp">
 
-    <EditText
-        android:id="@+id/ResultsPageTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Quiz Results"
-        android:textAlignment="center"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteY="29dp"
-        android:layout_marginRight="33dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginLeft="32dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
-
-    <EditText
-        android:id="@+id/ResultsPageTimeTitle"
-        android:layout_width="142dp"
-        android:layout_height="42dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Quiz Duration:"
-        tools:layout_editor_absoluteY="118dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
-
-    <EditText
-        android:id="@+id/ResultsPageWrong"
-        android:layout_width="162dp"
-        android:layout_height="50dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Incorrect Anwers:"
-        tools:layout_editor_absoluteY="266dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
-
-    <EditText
-        android:id="@+id/ResultsPageCorrect"
-        android:layout_width="142dp"
-        android:layout_height="46dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Correct Anwers:"
-        tools:layout_editor_absoluteY="192dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
-
-    <EditText
-        android:id="@+id/TimeDisplay"
-        android:layout_width="153dp"
-        android:layout_height="48dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Time"
-        android:textAlignment="center"
-        tools:layout_editor_absoluteY="118dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        app:layout_constraintRight_toRightOf="parent" />
-
-    <EditText
-        android:id="@+id/CorrectPercentage"
-        android:layout_width="153dp"
-        android:layout_height="48dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Correct"
-        android:textAlignment="center"
-        tools:layout_editor_absoluteY="192dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        app:layout_constraintRight_toRightOf="parent" />
-
-    <EditText
-        android:id="@+id/IncorrectPercentage"
-        android:layout_width="153dp"
-        android:layout_height="46dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Incorrect"
-        android:textAlignment="center"
-        tools:layout_editor_absoluteY="266dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        app:layout_constraintRight_toRightOf="parent" />
-
-    <Button
-        android:id="@+id/ReturnToHomeButton"
-        android:layout_width="181dp"
-        android:layout_height="52dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:text="Return to Main Menu"
-        android:textStyle="bold"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="567dp"
-        tools:layout_editor_absoluteX="319dp" />
-
-    <EditText
-        android:id="@+id/ThankYou"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Thanks for Playing!"
-        android:textAlignment="center"
-        android:textSize="30sp"
-        android:textStyle="italic"
-        tools:layout_editor_absoluteY="664dp"
-        android:layout_marginRight="33dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginLeft="32dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
-
     <Button
         android:id="@+id/PlayAgainButton"
         android:layout_width="180dp"
@@ -136,43 +17,145 @@
         android:text="Play Again!"
         android:textStyle="bold"
         app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="500dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="375dp" />
 
-    <EditText
-        android:id="@+id/YouKnowButton"
-        android:layout_width="122dp"
-        android:layout_height="49dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="You Know:"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteY="391dp"
-        android:layout_marginLeft="16dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginStart="16dp" />
-
-    <EditText
-        android:id="@+id/KnownWords"
-        android:layout_width="129dp"
-        android:layout_height="47dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="words"
-        android:textAlignment="center"
-        app:layout_constraintLeft_toRightOf="@+id/YouKnowButton"
-        app:layout_constraintRight_toLeftOf="@+id/ArabicWords"
-        tools:layout_editor_absoluteY="393dp" />
-
-    <EditText
-        android:id="@+id/ArabicWords"
-        android:layout_width="162dp"
-        android:layout_height="47dp"
-        android:layout_marginEnd="32dp"
+    <Button
+        android:id="@+id/ReturnToHomeButton"
+        android:layout_width="180dp"
+        android:layout_height="52dp"
+        android:text="Return to Main Menu"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="435dp"
         android:layout_marginRight="32dp"
-        android:ems="10"
-        android:inputType="textPersonName"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/QuizResults"
+        android:layout_width="296dp"
+        android:layout_height="29dp"
+        android:text="Quiz Results"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/Time"
+        android:layout_width="108dp"
+        android:layout_height="39dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="75dp"
+        android:text="TIme"
+        android:textAlignment="textEnd"
+        android:textSize="18sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/CorrectAnswers"
+        android:layout_width="144dp"
+        android:layout_height="44dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="125dp"
+        android:text="Correct Answers"
+        android:textAlignment="textStart"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/CorrectNum"
+        android:layout_width="108dp"
+        android:layout_height="39dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="125dp"
+        android:text="Correct"
+        android:textAlignment="textEnd"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="@+id/Time"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="24dp" />
+
+    <TextView
+        android:id="@+id/IncorrectAnswers"
+        android:layout_width="158dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="180dp"
+        android:text="Incorrect Answers"
+        android:textAlignment="textStart"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/IncorrectNum"
+        android:layout_width="112dp"
+        android:layout_height="45dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="180dp"
+        android:text="Incorrect"
+        android:textAlignment="textEnd"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="@+id/CorrectNum"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="24dp" />
+
+    <TextView
+        android:id="@+id/QuizDuration"
+        android:layout_width="143dp"
+        android:layout_height="41dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="75dp"
+        android:text="Quiz Duration"
+        android:textAlignment="textStart"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/YouKnow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="275dp"
+        android:text="You know:"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/Words"
+        android:layout_marginLeft="8dp" />
+
+    <TextView
+        android:id="@+id/Words"
+        android:layout_width="72dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="275dp"
+        android:text="Words"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/ArabicWords"
+        app:layout_constraintLeft_toRightOf="@+id/YouKnow" />
+
+    <TextView
+        android:id="@+id/ArabicWords"
+        android:layout_width="156dp"
+        android:layout_height="31dp"
         android:text="Arabic Words!"
         android:textSize="24sp"
         app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="393dp" />
+        app:layout_constraintLeft_toRightOf="@+id/Words"
+        android:layout_marginRight="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="275dp" />
+
 </android.support.constraint.ConstraintLayout>

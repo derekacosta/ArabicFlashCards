@@ -3,6 +3,7 @@ package com.example.im_working.arabicflashcards;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -34,6 +35,10 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
     static int count = 0;
     static int countee = 0;
     int selected = 0;
+    static int progressBarCounter = 0;
+    static int answersCorrect = 0;
+    static int answersIncorrect = 0;
+    static String timer;
 
 
     @Override
@@ -107,14 +112,42 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
     public void onNothingSelected(AdapterView<?> parent) {
 
     }
+    static CountDownTimer t = new CountDownTimer(100000000 , 1000) {
+        int cnt;
+
+        @Override
+        public void onTick(long millisUntilFinished) {
+
+            cnt++;
+            String time = new Integer(cnt).toString();
+
+            long millis = cnt;
+            int seconds = (int) (millis / 60);
+            int minutes = seconds / 60;
+            seconds     = seconds % 60;
+
+            timer = String.format(String.valueOf(millis));
+
+        }
+
+        @Override
+        public void onFinish() {            }
+    };
 
     @Override
     public void onClick(View v) {
+//            increment = 1/count;
             Intent i = new Intent(MainActivity.this, GameActivity.class);
             i.putExtra("chose", paths[selected]);
             startActivity(i);
+            t.start();
     }
-
+//    @Override
+//    public void onRestart() {
+//        super.onRestart();
+//        //When BACK BUTTON is pressed, the activity on the stack is restarted
+//        //Do what you want on the refresh procedure here
+//    }
 
     private class DownloadTask extends AsyncTask<JSONObject, Void, JSONObject> {
 
