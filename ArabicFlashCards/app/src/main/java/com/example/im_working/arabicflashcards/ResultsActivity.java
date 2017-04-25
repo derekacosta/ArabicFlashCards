@@ -19,6 +19,7 @@ public class ResultsActivity extends AppCompatActivity implements View.OnClickLi
 
         Button playAgain = (Button) findViewById(R.id.PlayAgainButton);
         playAgain.setOnClickListener(this);
+        MainActivity.countee = 0;
     }
 
     @Override

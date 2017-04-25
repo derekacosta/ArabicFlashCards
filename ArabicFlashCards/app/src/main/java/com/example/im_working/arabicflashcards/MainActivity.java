@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
     TextView counter;
 
     static int count = 0;
-
+    static int countee = 0;
     int selected = 0;
 
 
