@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "147743230164",
+    "firebase_url": "https://arabicquiz-2d85c.firebaseio.com",
+    "project_id": "arabicquiz-2d85c",
+    "storage_bucket": "arabicquiz-2d85c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:147743230164:android:c2fd1fa94b235b63",
+        "android_client_info": {
+          "package_name": "com.example.im_working.arabicflashcards"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "147743230164-cbv191ou6vlejo00pmek50lkprfdlpf4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.im_working.arabicflashcards",
+            "certificate_hash": "2c325cdd1011499b42bea3c2db8795abba0f0775"
+          }
+        },
+        {
+          "client_id": "147743230164-pmkhobjfhopi2q6ndonfhmvevhv9cn5n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBP8wLaGpv7Pon087dQFKl0lyQOW4HFIxA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "147743230164-pmkhobjfhopi2q6ndonfhmvevhv9cn5n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

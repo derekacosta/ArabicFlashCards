@@ -14,12 +14,17 @@ import android.widget.SeekBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.google.firebase.database.FirebaseDatabase;
+
 import org.json.JSONObject;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.sql.Date;
+import java.util.ArrayList;
+import java.util.Map;
 import java.util.concurrent.ExecutionException;
 
 
@@ -39,6 +44,14 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
     static int answersCorrect = 0;
     static int answersIncorrect = 0;
     static String timer;
+    static int total = 0;
+
+
+    static FirebaseDatabase database = FirebaseDatabase.getInstance();
+//    static Long tsLong = System.currentTimeMillis()/1000;
+//    static String ts = tsLong.toString();
+    static Date ts = new Date(System.currentTimeMillis());
+    static Map<String, ArrayList<String>> userdata;
 
 
     @Override
@@ -47,7 +60,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
         setContentView(R.layout.activity_main);
 
         DownloadTask task = new DownloadTask();
-        int total = 0;
         try {
             JSON = task.execute().get();
             total = JSON.length();
@@ -101,6 +113,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
 
             }
         });
+
     }
 
 

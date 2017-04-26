@@ -31,6 +31,11 @@ public class GameActivity extends AppCompatActivity implements AdapterView.OnIte
     List<Button> buttons = new ArrayList<Button>();
     String btn0,btn1,btn2,btn3,btn4,btn5,btn6,btn7;
     ArrayList<String> answers = new ArrayList<String>();
+    static ArrayList<String> temp = new ArrayList<String>();
+    static ArrayList<String> temp2 = new ArrayList<String>();
+    static String ts;
+    static String status;
+    static String status2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,6 +90,7 @@ public class GameActivity extends AppCompatActivity implements AdapterView.OnIte
         Options(message);
 
 
+
     }
 
 
@@ -129,20 +135,29 @@ public class GameActivity extends AppCompatActivity implements AdapterView.OnIte
 
         }
         if(bool.get(true).size() == 2) {
-//            if(butt.contains(answers.get(0).toString()) && butt.contains(butt.get(1).toString())
-//            || butt.contains(answers.get(1).toString()) && butt.contains(butt.get(2).toString())
-//                    || butt.contains(answers.get(0).toString()) && butt.contains(butt.get(2).toString()))
-//                getWindow().getDecorView().setBackgroundColor(Color.GREEN);
-//            else
-//                getWindow().getDecorView().setBackgroundColor(Color.RED);
+            Long tsLong = System.currentTimeMillis();
+            ts = tsLong.toString();
             if(answers.contains(butt.get(0)) && answers.contains(butt.get(1)) && !butt.get(0).equals(butt.get(1))){
                 getWindow().getDecorView().setBackgroundColor(Color.GREEN);
                 answersCorrect++;
+                status = "Correct";
+                temp.add(ts);
+                temp.add(answers.get(0));
+                temp.add(answers.get(1));
+                temp.add(answers.get(2));
             }
             else {
                 getWindow().getDecorView().setBackgroundColor(Color.RED);
                 answersIncorrect++;
+                status2 = "Incorrect";
+                temp2.add(ts);
+                temp2.add(answers.get(0));
+                temp2.add(answers.get(1));
+                temp2.add(answers.get(2));
+
             }
+
+
             answers.clear();
             if(MainActivity.countee / 2 != count){
                 recreate();
@@ -156,8 +171,6 @@ public class GameActivity extends AppCompatActivity implements AdapterView.OnIte
                 startActivity(i);
             }
         }
-
-
     }
 
     public void Options(String message) {
